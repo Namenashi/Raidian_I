@@ -2,14 +2,14 @@
     <img src="Logo/Logo3-Icon.png" width="50%" alt="Logo">
 </div>
 
-# Pilot Unit: Athena I Development Log
+# Pilot Unit: Raidian I Development Log
 I'm an Informatik (Computer Science) student with no robotics knowledge beyond basic Arduino tutorials. This document should be viewed as an amateur's failure log and a record of gradually gaining experience through those failures. 
 Claude was used during the writing process to help with grammar and corrections.
 
-<img src="Photo/Athena_I/Main.png" alt="Main">
+<img src="Photo/Raidian_I/Main.png" alt="Main">
 
 ### Overview
-Athena Unit 1, hereafter referred to as Unit 1, is a robot that I started developing with the goal of indoor and limited outdoor driving. The objectives are to drive using two wheels mounted parallel to each other, maintain balance through MPU6050 sensor and PID control, and transmit real-time captured video to users via a server.
+Raidian Unit 1, hereafter referred to as Unit 1, is a robot that I started developing with the goal of indoor and limited outdoor driving. The objectives are to drive using two wheels mounted parallel to each other, maintain balance through MPU6050 sensor and PID control, and transmit real-time captured video to users via a server.
 This unit also serves as a pilot model for future development. Through completing this unit, I expect to reconfirm my current abilities, establish and optimize the overall development process to some extent, and learn solutions to non-theoretical problems that will be encountered in actual robot development, in addition to theoretical aspects.
 While this ultimately became a failed project, I still want to organize the development process and the lessons learned from it.
 
@@ -23,15 +23,15 @@ The very first ver.1 I built didn't work properly due to insufficient performanc
 
 Since I couldn't solve these fundamental problems caused by the limitations of materials used in robot construction, I decided to start making a new version.
 
-<img src="Photo/Athena_I/Ver3/PXL_20241028_191448858.jpg" alt="Image">
-<img src="Photo/Athena_I/Ver3/PXL_20241028_191507113.jpg" alt="Image">
-<img src="Photo/Athena_I/Ver3/PXL_20241029_215002638.jpg" alt="Image">
-<img src="Photo/Athena_I/Ver3/PXL_20241030_103023779.jpg" alt="Image">
-<img src="Photo/Athena_I/Ver3/PXL_20241029_153633618.jpg" alt="Image">
-<img src="Photo/Athena_I/Ver3/PXL_20241101_011754470.jpg" alt="Image">
-<img src="Photo/Athena_I/Ver3/PXL_20241113_232816917.jpg" alt="Image">
-<img src="Photo/Athena_I/Ver3/PXL_20241102_141401536.jpg" alt="Image">
-<img src="Photo/Athena_I/Ver3/PXL_20241113_234714605.jpg" alt="Image">
+<img src="Photo/Raidian_I/Ver3/PXL_20241028_191448858.jpg" alt="Image">
+<img src="Photo/Raidian_I/Ver3/PXL_20241028_191507113.jpg" alt="Image">
+<img src="Photo/Raidian_I/Ver3/PXL_20241029_215002638.jpg" alt="Image">
+<img src="Photo/Raidian_I/Ver3/PXL_20241030_103023779.jpg" alt="Image">
+<img src="Photo/Raidian_I/Ver3/PXL_20241029_153633618.jpg" alt="Image">
+<img src="Photo/Raidian_I/Ver3/PXL_20241101_011754470.jpg" alt="Image">
+<img src="Photo/Raidian_I/Ver3/PXL_20241113_232816917.jpg" alt="Image">
+<img src="Photo/Raidian_I/Ver3/PXL_20241102_141401536.jpg" alt="Image">
+<img src="Photo/Raidian_I/Ver3/PXL_20241113_234714605.jpg" alt="Image">
 
 
 ### Before Making ver.4. Improvements I Wanted to Apply
@@ -40,13 +40,13 @@ Since I couldn't solve these fundamental problems caused by the limitations of m
 - Let's avoid using Gewinde parts that are melted and inserted for fixing as much as possible. The precision tends to drop during insertion (especially angles), resulting in parts not fitting well together. And while the inserted threads are stronger than expected, they're still not strong enough to have high expectations. I think it's better to just use conventional bolt-nut fixing methods when possible.
 - It seems better to avoid painting when possible. Production time increases exponentially, and the results aren't very satisfying either. While there might be merit in terms of weight, the smell is very strong, and if this much effort and space is needed for painting a body of this size, it seems hard to handle if it gets bigger. Most importantly, since I find it annoying and hate spending days painting, let's finish with film when possible and only paint unavoidable parts from now on. But thinking conversely, film finishing also seems difficult to use on PLA material due to the characteristic of needing to be attached while heating, and I expect it would be hard to finish non-flat parts with film, so painting might be more suitable at times like this. Let's choose according to the situation.
 
-<img src="Photo/Athena_I_Render/Cubli alt 2 v24 2.png" alt="Image">
-<img src="Photo/Athena_I_Render/Cubli alt 2 v34 4.png" alt="Image">
-<img src="Photo/Athena_I_Render/Cubli alt 2 v24.png" alt="Image">
-<img src="Photo/Athena_I_Render/Cubli alt 2 v24 3.png" alt="Image">
-<img src="Photo/Athena_I_Render/Cubli alt 2 v34 5.png" alt="Image">
-<img src="Photo/Athena_I_Render/Screenshot 2024-11-25 111722.png" alt="Image">
-<img src="Photo/Athena_I_Render/Screenshot 2024-11-25 111634.png" alt="Image">
+<img src="Photo/Raidian_I_Render/Cubli alt 2 v24 2.png" alt="Image">
+<img src="Photo/Raidian_I_Render/Cubli alt 2 v34 4.png" alt="Image">
+<img src="Photo/Raidian_I_Render/Cubli alt 2 v24.png" alt="Image">
+<img src="Photo/Raidian_I_Render/Cubli alt 2 v24 3.png" alt="Image">
+<img src="Photo/Raidian_I_Render/Cubli alt 2 v34 5.png" alt="Image">
+<img src="Photo/Raidian_I_Render/Screenshot 2024-11-25 111722.png" alt="Image">
+<img src="Photo/Raidian_I_Render/Screenshot 2024-11-25 111634.png" alt="Image">
 
 ### About Robot Specs and Component Selection
 - Will uns ESP32.
@@ -63,30 +63,30 @@ Using solid rubber tires (Vollgummireifen) for electric scooters as tires. Accor
 - I plan to make it capable of stable driving in the 10-15km/h speed range and up to 20km/h driving under limited time and appropriate acceleration conditions.
 - Since I expect the need to overcome vibration, let's also use Federscheibe (spring washers).
 
-<img src="Photo/Athena_I/PXL_20241206_121831338.jpg" alt="Image">
-<img src="Photo/Athena_I/PXL_20241206_203218588.jpg" alt="Image">
-<img src="Photo/Athena_I/PXL_20241209_181803304.jpg" alt="Image">
-<img src="Photo/Athena_I/PXL_20241211_143746908.jpg" alt="Image">
-<img src="Photo/Athena_I/PXL_20241211_192512382.jpg" alt="Image">
-<img src="Photo/Athena_I/PXL_20241211_192546159.jpg" alt="Image">
-<img src="Photo/Athena_I/PXL_20241212_175523942.jpg" alt="Image">
-<img src="Photo/Athena_I/PXL_20241216_145513824.jpg" alt="Image">
-<img src="Photo/Athena_I/PXL_20241218_233348821.jpg" alt="Image">
-<img src="Photo/Athena_I/PXL_20241219_024019181.jpg" alt="Image">
-<img src="Photo/Athena_I/PXL_20241219_035544739.jpg" alt="Image">
-<img src="Photo/Athena_I/PXL_20241224_091721130.jpg" alt="Image">
-<img src="Photo/Athena_I/PXL_20241229_155106554.jpg" alt="Image">
-<img src="Photo/Athena_I/PXL_20241229_155122162.jpg" alt="Image">
-<img src="Photo/Athena_I/PXL_20250101_135740969.jpg" alt="Image">
-<img src="Photo/Athena_I/PXL_20250118_203126183.jpg" alt="Image">
-<img src="Photo/Athena_I/PXL_20250120_020847239.jpg" alt="Image">
-<img src="Photo/Athena_I/PXL_20250120_035920067.jpg" alt="Image">
-<img src="Photo/Athena_I/PXL_20250121_044917657.jpg" alt="Image">
-<img src="Photo/Athena_I/PXL_20250124_232619370.jpg" alt="Image">
-<img src="Photo/Athena_I/PXL_20250129_054546298.jpg" alt="Image">
-<img src="Photo/Athena_I/PXL_20250129_121938738.jpg" alt="Image">
-<img src="Photo/Athena_I/PXL_20250201_151037226.jpg" alt="Image">
-<img src="Photo/Athena_I/PXL_20250202_162843249.jpg" alt="Image">
+<img src="Photo/Raidian_I/PXL_20241206_121831338.jpg" alt="Image">
+<img src="Photo/Raidian_I/PXL_20241206_203218588.jpg" alt="Image">
+<img src="Photo/Raidian_I/PXL_20241209_181803304.jpg" alt="Image">
+<img src="Photo/Raidian_I/PXL_20241211_143746908.jpg" alt="Image">
+<img src="Photo/Raidian_I/PXL_20241211_192512382.jpg" alt="Image">
+<img src="Photo/Raidian_I/PXL_20241211_192546159.jpg" alt="Image">
+<img src="Photo/Raidian_I/PXL_20241212_175523942.jpg" alt="Image">
+<img src="Photo/Raidian_I/PXL_20241216_145513824.jpg" alt="Image">
+<img src="Photo/Raidian_I/PXL_20241218_233348821.jpg" alt="Image">
+<img src="Photo/Raidian_I/PXL_20241219_024019181.jpg" alt="Image">
+<img src="Photo/Raidian_I/PXL_20241219_035544739.jpg" alt="Image">
+<img src="Photo/Raidian_I/PXL_20241224_091721130.jpg" alt="Image">
+<img src="Photo/Raidian_I/PXL_20241229_155106554.jpg" alt="Image">
+<img src="Photo/Raidian_I/PXL_20241229_155122162.jpg" alt="Image">
+<img src="Photo/Raidian_I/PXL_20250101_135740969.jpg" alt="Image">
+<img src="Photo/Raidian_I/PXL_20250118_203126183.jpg" alt="Image">
+<img src="Photo/Raidian_I/PXL_20250120_020847239.jpg" alt="Image">
+<img src="Photo/Raidian_I/PXL_20250120_035920067.jpg" alt="Image">
+<img src="Photo/Raidian_I/PXL_20250121_044917657.jpg" alt="Image">
+<img src="Photo/Raidian_I/PXL_20250124_232619370.jpg" alt="Image">
+<img src="Photo/Raidian_I/PXL_20250129_054546298.jpg" alt="Image">
+<img src="Photo/Raidian_I/PXL_20250129_121938738.jpg" alt="Image">
+<img src="Photo/Raidian_I/PXL_20250201_151037226.jpg" alt="Image">
+<img src="Photo/Raidian_I/PXL_20250202_162843249.jpg" alt="Image">
 
 ### ESP32 Pin Map
 - MPU 6050 SDA -> GPIO 21
